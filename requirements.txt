@@ -1,7 +1,7 @@
 pandas==0.25.1
 numpy==1.19.1
 torch==1.6.0
-cv2
+opencv-python
 torchvision==0.7.0
 PIL==8.0.1
 io
