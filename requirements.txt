@@ -1,6 +1,5 @@
 -f https://download.pytorch.org/whl/torch_stable.html
 torch==1.6.0+cpu
-torchvision==0.7.0+cpu
 pandas==0.25.1
 numpy==1.19.1
 opencv-python
