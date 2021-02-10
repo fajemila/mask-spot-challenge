@@ -3,10 +3,10 @@ numpy==1.19.1
 torch==1.6.0
 opencv-python
 torchvision==0.7.0
-PIL==8.0.1
+Pillow==8.0.1
 io
 base64
-0s
+os
 Flask==1.1.1
 gunicorn==19.9.0
 itsdangerous==1.1.0
