@@ -68,7 +68,7 @@ def get_prediction2(image_bytes):
 @app.route('/',methods=['POST',"GET"])
 def maskclass():
     if request.method == "POST":
-        file = request.form.get['file']
+        file = request.files['file']
         # convert that to bytes
         img_bytes = file.read()
         image = Image.open(io.BytesIO(img_bytes)).convert('RGB')
