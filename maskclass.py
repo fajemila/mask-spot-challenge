@@ -7,7 +7,6 @@ import torchvision
 import io
 import torchvision.transforms as transforms
 from flask import Flask , render_template,request,redirect,Response,url_for
-from flask_socketio import SocketIO
 from PIL import Image
 import cv2
 app = Flask(__name__)
