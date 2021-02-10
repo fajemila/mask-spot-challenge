@@ -1,0 +1,32 @@
+{% extends 'overview.html' %}
+
+{% block head%}
+<title>Home</title>
+{% endblock %}
+{% block body%}
+<br>
+<h1 style="text-align: center;">Face Mask Classification</h1>
+<h3 style="text-align: center;">Check My <a href="https://github.com/fajemila">Github Repo </a>For COde</h3>
+<br>
+<div class="bg-light p-5 rounded">
+    <div class="col-sm-8 mx-auto">
+        {%if prediction%}
+        <img src={{image_sc}}>
+        {% endif %}
+        {%if prediction%}
+        {%else%}
+        <form action="/cap" method='POST'>
+            <input class="btn btn-primary" type='submit' value='Capture'>
+        </form>
+        {% endif %}
+        {%if prediction%}
+        <form action="/cap" method='POST'>
+            <input class="btn btn-primary" type='submit' value='CaptureNew'>
+        </form>
+        {% endif %}
+        <br>
+        <p>{{prediction}}</p>
+    </div>
+</div>
+
+{% endblock %}

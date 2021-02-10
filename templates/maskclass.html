@@ -1,0 +1,32 @@
+{% extends 'overview.html' %}
+
+{% block head%}
+<title>Home</title>
+{% endblock %}
+{% block body%}
+<br>
+<h1 style="text-align: center;">Face Mask Classification</h1>
+<h3 style="text-align: center;">Check My <a href="https://github.com/fajemila">Github Repo </a>For COde</h3>
+<br>
+<div class="bg-light p-5 rounded">
+    <div class="col-sm-8 mx-auto">
+        {%if prediction%}
+        <img src="{{ url_for('static',filename='took.jpg') }}">
+        <br>
+        <p>{{prediction}}</p>
+        {% endif %}
+        <form action="/maskclass" method='POST' enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="content">Post:</label>
+                <input type="file" name="file" required="required" multiple accept="image/*"/>
+            </div>
+            <br>
+            <input class="btn btn-info" type='submit' value='Classify'>
+        </form>
+        <a class="btn btn-primary" href="/cap" role="button">Use Device Camera »</a>
+        <br>
+        <p>{{prediction}}</p>
+    </div>
+</div>
+
+{% endblock %}
