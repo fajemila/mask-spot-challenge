@@ -1,1 +1,1 @@
-web: gunicorn app:maskclass
+web: gunicorn maskclass:app
