@@ -2,7 +2,7 @@
 torch==1.6.0+cpu
 pandas==0.25.1
 numpy==1.19.1
-opencv-python
+opencv-python-headless
 torchvision==0.7.0
 Pillow==8.0.1
 pybase64
